@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BrookHaven Cafe — Crafting Every Cup with Passion</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons (replacement for lucide-react) -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <div class="logo-icon"><i data-lucide="coffee"></i></div>
+        <span class="logo-text">BrookHaven Cafe</span>
+      </a>
+
+      <nav class="nav-desktop" id="navDesktop">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta-group">
+        <button class="btn-signin">Sign In</button>
+        <a href="#menu" class="btn-order">Order Now</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <i data-lucide="menu" id="iconMenu"></i>
+        <i data-lucide="x" id="iconX" style="display:none;"></i>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#menu" class="mobile-link">Menu</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#reservation" class="mobile-link">Reservation</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="mobile-cta-row">
+        <button class="btn-signin flex1">Sign In</button>
+        <a href="#menu" class="btn-order flex1 center" id="mobileOrderBtn">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <span class="eyebrow"><span class="eyebrow-line"></span>Specialty Coffee · Est. 2017</span>
+      <h1 class="hero-title">Crafting Every Cup <em>with Passion</em></h1>
+      <p class="hero-desc">
+        From bean to cup, every detail is considered. We source, roast, and
+        brew with intention — so your morning ritual becomes something worth
+        waking up for.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Order Now <i data-lucide="chevron-right" class="icon-16"></i></a>
+        <a href="#reservation" class="btn-outline">Book a Table</a>
+      </div>
+
+      <div class="mini-stats" id="miniStats"></div>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1716808681534-9de029eda598?w=1000&h=1200&fit=crop&auto=format" alt="Cappuccino on a warm wooden plate" class="hero-img" />
+      <div class="hero-gradient"></div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon"><i data-lucide="star" class="icon-16 fill-white"></i></div>
+        <div>
+          <div class="hero-badge-rating">4.9 / 5.0</div>
+          <div class="hero-badge-sub">1,200+ reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED MENU ── -->
+  <section id="menu" class="section menu-section">
+    <div class="section-head">
+      <span class="eyebrow-sm">Our Menu</span>
+      <h2 class="section-title">Popular Menu</h2>
+      <p class="section-sub">Crafted from beans we know by name. Each drink is a decision, not a recipe.</p>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- ── WHY CHOOSE US ── -->
+  <section class="section section-muted">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow-sm">Why BrookHaven Cafe</span>
+        <h2 class="section-title">What Sets Us Apart</h2>
+      </div>
+      <div class="features-grid" id="featuresGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── PROMO BANNER ── -->
+  <section class="section promo-section">
+    <div class="promo-card">
+      <div class="promo-image-wrap">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=900&h=600&fit=crop&auto=format" alt="Seasonal iced cold brew drink" class="promo-img" />
+        <div class="promo-img-gradient"></div>
+      </div>
+      <div class="promo-text">
+        <span class="promo-eyebrow">Limited Time</span>
+        <h2 class="promo-title">Summer Cold Brew Festival</h2>
+        <p class="promo-desc">25% off all cold-brew drinks through July. No code needed — just come in, order, and let the ice do the rest.</p>
+        <p class="promo-dates">Valid June 19 – July 31, 2026</p>
+        <button class="btn-promo">Claim Offer <i data-lucide="chevron-right" class="icon-16"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section section-muted">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&h=1000&fit=crop&auto=format" alt="Brew Haven interior — warm wooden tables and chairs" />
+        </div>
+        <div class="about-img-accent">
+          <img src="https://images.unsplash.com/photo-1779542949547-c71968a47a15?w=300&h=300&fit=crop&auto=format" alt="Barista crafting latte art" />
+        </div>
+      </div>
+
+      <div class="about-text">
+        <span class="eyebrow-sm">Our Story</span>
+        <h2 class="section-title left">A Corner of the City That Smells Like Home</h2>
+        <p class="about-p">
+          BrookHaven Cafe started in 2017 as a narrow shopfront with a hand-built
+          espresso bar and a menu written in chalk. We had two baristas, one
+          grinder, and a belief that coffee deserved the same attention as
+          fine food.
+        </p>
+        <p class="about-p">
+          Seven years later, we still pull every shot by hand, still cup
+          every new origin before it touches your cup, and still sweep the
+          floors ourselves. Some things shouldn't scale.
+        </p>
+
+        <div class="about-stats" id="aboutStats"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section class="section reviews-section">
+    <div class="section-head">
+      <span class="eyebrow-sm">Testimonials</span>
+      <h2 class="section-title">What People Say</h2>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </section>
+
+  <!-- ── RESERVATION ── -->
+  <section id="reservation" class="section section-muted">
+    <div class="reservation-wrap">
+      <div class="section-head">
+        <span class="eyebrow-sm">Reserve a Spot</span>
+        <h2 class="section-title">Book a Table</h2>
+        <p class="section-sub">We hold tables for up to 15 minutes past your booking time. Walk-ins always welcome.</p>
+      </div>
+
+      <div class="reservation-card">
+        <!-- Form view -->
+        <form id="reservationForm" class="reservation-form">
+          <div class="form-row two-col">
+            <div class="field">
+              <label for="resDate">Date</label>
+              <input type="date" id="resDate" required />
+            </div>
+            <div class="field">
+              <label for="resTime">Time</label>
+              <select id="resTime" required>
+                <option value="">Select a time</option>
+                <option>8:00 AM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Number of Guests</label>
+            <div class="guest-control">
+              <button type="button" id="guestMinus" class="guest-btn"><i data-lucide="minus" class="icon-16"></i></button>
+              <span class="guest-count" id="guestCount">2</span>
+              <button type="button" id="guestPlus" class="guest-btn"><i data-lucide="plus" class="icon-16"></i></button>
+              <span class="guest-label" id="guestLabel">guests · max 12</span>
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div class="field">
+              <label for="resName">Name</label>
+              <input type="text" id="resName" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="resEmail">Email</label>
+              <input type="email" id="resEmail" placeholder="your@email.com" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit">Reserve My Table</button>
+        </form>
+
+        <!-- Success view -->
+        <div class="reservation-success" id="reservationSuccess" style="display:none;">
+          <div class="success-icon"><i data-lucide="calendar" class="icon-28"></i></div>
+          <h3 class="success-title">You're all set!</h3>
+          <p class="success-desc">A confirmation will be sent to your inbox. See you soon.</p>
+          <button class="success-again" id="resetReservation">Make another reservation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LOCATION ── -->
+  <section id="contact" class="section location-section">
+    <div class="section-head">
+      <span class="eyebrow-sm">Find Us</span>
+      <h2 class="section-title">Come Visit</h2>
+    </div>
+
+    <div class="location-grid">
+      <div class="map-wrap">
+        <iframe
+          title="Brew Haven location"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-73.99%2C40.72%2C-73.97%2C40.74&layer=mapnik"
+          class="map-iframe"
+          loading="lazy">
+        </iframe>
+        <div class="map-pin">
+          <div class="map-pin-icon"><i data-lucide="coffee" class="icon-14 text-white"></i></div>
+        </div>
+      </div>
+
+      <div class="info-cards" id="infoCards"></div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="coffee" class="icon-16 text-white"></i></div>
+            <span class="footer-logo-text">BrookHaven Cafe</span>
+          </div>
+          <p class="footer-tagline">Specialty coffee, honest craft, a place worth returning to.</p>
+          <div class="footer-socials" id="footerSocials"></div>
+        </div>
+
+        <div class="footer-col" id="footerCol1"></div>
+        <div class="footer-col" id="footerCol2"></div>
+        <div class="footer-col" id="footerCol3"></div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 BrookHaven Cafe. All rights reserved.</p>
+        <div class="footer-legal" id="footerLegal"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
